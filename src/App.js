@@ -11,7 +11,7 @@ export const router = createBrowserRouter([
     element: <Layout />, // Layout das paginas que possuem header.
     children: [
       {
-        path: '/home',
+        path: '/',
         element: <Home />
       },
       {
@@ -29,7 +29,7 @@ export const router = createBrowserRouter([
     ]
   },
   {
-    path: '/',
+    path: '/login',
     element: <Login />
   }
 ])
