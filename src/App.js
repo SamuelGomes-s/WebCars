@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import { createBrowserRouter } from "react-router-dom"
+import Home from "./Pages/Home"
+import CarDetail from "../src/Pages/CarDetail"
+import Dashboard from "../src/Pages/Dashboard"
+import New from "../src/Pages/Dashboard/New"
+import Login from "../src/Pages/Login"
+import Layout from "../src/components/Layout"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
-
-export default App;
+export const router = createBrowserRouter([
+  {
+    element: <Layout />, // Layout das paginas que possuem header.
+    children: [
+      {
+        path: '/home',
+        element: <Home />
+      },
+      {
+        path: '/car:id',
+        element: <CarDetail />
+      },
+      {
+        path: '/dashboard',
+        element: <Dashboard />
+      },
+      {
+        path: '/new',
+        element: <New />
+      },
+    ]
+  },
+  {
+    path: '/',
+    element: <Login />
+  }
+])
