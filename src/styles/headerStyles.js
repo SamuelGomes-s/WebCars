@@ -16,7 +16,7 @@ const HeaderContent = styled.div`
     flex-direction:row;
     justify-content:space-between;
     align-items:center;
-    max-width: 1600px;
+    max-width: 1280px;
     margin: 0 auto;
 `;
 
@@ -28,7 +28,7 @@ const ActionBtn = styled(Link)`
     text-decoration:none;
     cursor: pointer;
     transition: all 0.5s;
-    margin: 5px 25px ;
+    margin: 5px 0;
     &:hover{
         transform: scale(1.1);
         opacity: 0.9;
@@ -43,7 +43,6 @@ const ActionBtn = styled(Link)`
 const Logo = styled(Link)`
     background-image: url(${logoImg});    
     height: 45px;
-    margin:  0 25px ;
     width: 200px;
     transition: all 0.5s;
     background-repeat: no-repeat;
