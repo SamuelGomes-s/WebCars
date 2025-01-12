@@ -30,7 +30,7 @@ export default function Login() {
         setLoginCompleted,
         loadingAuth
     } = useContext(AuthContext)
-    const [isLogin, setIsLogin] = useState(false)
+    const [isLogin, setIsLogin] = useState(true)
     const [loading, setLoading] = useState(false)
 
     const schema = z.object({
@@ -55,7 +55,7 @@ export default function Login() {
     // sempre que cadastrar ou realizar o login, ira atualizar o estado e o redirecionamento.
     useEffect(() => {
         if (loginCompleted) {
-            navigate('/dashboard');
+            navigate('/dashboard',{ replace: true});
         }
     }, [loginCompleted, navigate]);
 
