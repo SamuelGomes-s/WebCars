@@ -2,15 +2,18 @@ import {
     ActionBtn,
     HeaderContainer,
     HeaderContent,
-    Logo
 } from "../../styles/headerStyles";
 import { IoMdLogIn } from "react-icons/io";
 import { IoPersonCircleOutline } from "react-icons/io5";
+import { Logo } from "../../styles/generalStyles";
+import { useContext } from "react";
+import { AuthContext } from "../../contexts/authContext"
 
 export default function Header() {
-
-    const loadingAuth = false;
-    const signed = false
+    const {
+        loadingAuth,
+        signed
+    } = useContext(AuthContext)
 
     return (
         <HeaderContainer>

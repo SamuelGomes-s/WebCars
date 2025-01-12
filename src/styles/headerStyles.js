@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import logoImg from "../assets/logo.svg"
 import { Link } from "react-router-dom";
 
 const HeaderContainer = styled.div`
@@ -40,23 +39,9 @@ const ActionBtn = styled(Link)`
     
 `;
 
-const Logo = styled(Link)`
-    background-image: url(${logoImg});    
-    height: 45px;
-    width: 200px;
-    transition: all 0.5s;
-    background-repeat: no-repeat;
-    &:hover{
-        cursor: pointer;
-        opacity: 0.95;
-        
-        transform: scale(1.05);
-    }
-`;
 
 export {
     HeaderContainer,
     HeaderContent,
     ActionBtn,
-    Logo
 }
