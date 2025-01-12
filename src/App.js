@@ -5,6 +5,7 @@ import Dashboard from "../src/Pages/Dashboard"
 import New from "../src/Pages/Dashboard/New"
 import Login from "../src/Pages/Login"
 import Layout from "../src/components/Layout"
+import Private from "./routes/Private"
 
 export const router = createBrowserRouter([
   {
@@ -20,7 +21,8 @@ export const router = createBrowserRouter([
       },
       {
         path: '/dashboard',
-        element: <Dashboard />
+        element: <Private> <Dashboard /></Private>
+
       },
       {
         path: '/new',

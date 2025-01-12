@@ -3,7 +3,7 @@
 /node_modules
 /.pnp
 .pnp.js
-src\services\Firebase\firebaseConnection.js
+/src/services/Firebase/firebaseConnection.js
 
 # testing
 /coverage
