@@ -31,7 +31,6 @@ export default function AuthContextProvider({ children }) {
                     name: user?.displayName
                 }
                 setLoginCompleted(true)
-                console.log(u)
                 setUser(u)
                 setLoadingAuth(false)
             } else {

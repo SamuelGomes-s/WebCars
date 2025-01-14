@@ -20,6 +20,10 @@ const ContainerCars = styled(Link)`
 const CarImg = styled.img`
     border-top-right-radius: 8px;
     border-top-left-radius: 8px;
+    display: block;
+    object-fit:  cover;
+    width:100%;
+    height: 250px;
 `;
 
 const ContentInfo = styled.div`

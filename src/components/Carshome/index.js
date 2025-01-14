@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
     CarImg,
     ContainerCars,
@@ -9,22 +10,38 @@ import {
     City
 } from "../../styles/carsHomeStyles";
 
-export default function CarsHomePage() {
-
+export default function CarsHomePage({ car }) {
+    const [loadImg, setLoadImg] = useState([])
+    function handleImageLoad(id) {
+        setLoadImg(img => [...img, id])
+    }
     return (
-        <ContainerCars>
+        <ContainerCars to={`/car/${car.id}`}>
+            <div
+                style={{
+                    width: '100%',
+                    height: '250px',
+                    backgroundColor: '#fff',
+                    display: loadImg ? 'none' : 'block',
+                    border: "1px solid rgba(136,136,136)",
+                }}
+            >
+            </div>
             <CarImg
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5RK4FNCPv1kHNXX2dA5xeRKeqbpf7c8IgcA&s"
+                src={car.images[0].url}
+                alt="Foto do veiculo"
+                style={{ display: loadImg ? 'block' : 'none' }}
+                onLoad={() => handleImageLoad(car.id)}
             />
             <ContentInfo>
-                <CarName>Argo Drive</CarName>
+                <CarName>{car.name}</CarName>
                 <TechnicalInfo>
                     <Info>
-                        2016/2017 | 2000 km
+                        {car.year} | {car.km}
                     </Info>
                 </TechnicalInfo>
-                <Price>R$ 69000</Price>
-                <City>Carmo do Paranaiba</City>
+                <Price>R$ {car.price}</Price>
+                <City>{car.city}</City>
             </ContentInfo>
         </ContainerCars>
     )
