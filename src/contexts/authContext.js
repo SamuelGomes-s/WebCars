@@ -30,10 +30,13 @@ export default function AuthContextProvider({ children }) {
                     email: user?.email,
                     name: user?.displayName
                 }
+                setLoginCompleted(true)
+                console.log(u)
                 setUser(u)
                 setLoadingAuth(false)
             } else {
                 setUser(null)
+                setLoginCompleted(false)
                 setLoadingAuth(false)
             }
         })
@@ -101,6 +104,7 @@ export default function AuthContextProvider({ children }) {
         <AuthContext.Provider
             value={{
                 signed: !!user,
+                user,
                 handleTest,
                 handleSignIn,
                 handleSignUp,

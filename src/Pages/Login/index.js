@@ -25,9 +25,7 @@ export default function Login() {
     const {
         handleSignIn,
         handleSignUp,
-        logOut,
         loginCompleted,
-        setLoginCompleted,
         loadingAuth
     } = useContext(AuthContext)
     const [isLogin, setIsLogin] = useState(true)
@@ -45,12 +43,6 @@ export default function Login() {
         mode: 'onChange'
     })
 
-    // garantir que sempre que o usuario carrgar o /login(manualmente por exemplo)  deslogue  // verificar mais tarde.
-    useEffect(() => {
-        setLoginCompleted(false)
-        logOut()
-        reset({ errors: {} })
-    }, [])
 
     // sempre que cadastrar ou realizar o login, ira atualizar o estado e o redirecionamento.
     useEffect(() => {

@@ -25,8 +25,8 @@ export const router = createBrowserRouter([
 
       },
       {
-        path: '/new',
-        element: <New />
+        path: 'dashboard/new',
+        element: <Private><New /></Private>
       },
     ]
   },
