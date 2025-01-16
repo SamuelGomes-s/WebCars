@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 const Container = styled.div`
     max-width: 1280px;
     margin: 0 auto;
+    padding-bottom: 2em;
 `;
 
 const Logo = styled(Link)`
