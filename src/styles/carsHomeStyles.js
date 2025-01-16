@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 const ContainerCars = styled(Link)`
     background-color: #fff;
+    position: relative;
     width:400px;
     display: flex;
     flex-direction: column;
@@ -15,6 +16,7 @@ const ContainerCars = styled(Link)`
         box-shadow: 10px 10px 5px rgba(136,136,136,0.4);
         transform: scale(1.02)
     }
+    z-index: 1;
 `;
 
 const CarImg = styled.img`
@@ -56,6 +58,26 @@ const City = styled.span`
     padding: 0.5em 0;
 `;
 
+const ActionBtn = styled.span`
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* right: 10px; */
+    z-index: 99;
+    background-color: #fff;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    transition: ease-in-out 0.5s;
+    &:hover{
+        transform: scale(1.2);
+        color: #f00;
+    }
+`;
+
 export {
     ContainerCars,
     CarImg,
@@ -64,5 +86,6 @@ export {
     CarName,
     TechnicalInfo,
     Info,
-    City
+    City,
+    ActionBtn
 }

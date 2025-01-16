@@ -72,7 +72,8 @@ const Input = styled.input`
     border: 1px solid #878787;
     border-radius: 8px;
     box-shadow: 0 5px 2px rgba(136,136,136,0.4);
-    outline: none;`;
+    outline: none;
+`;
 
 const TextArea = styled.textarea`
     height:90px;
@@ -83,6 +84,7 @@ const TextArea = styled.textarea`
     box-shadow: 0 5px 2px rgba(136,136,136,0.4);
     outline: none;
 `;
+
 const FileContent = styled.button`
     display: flex;
     justify-content: center;
@@ -100,7 +102,6 @@ const FileContent = styled.button`
         color: #f00;
     }
 `;
-
 
 const Form = styled.form`
     display: flex;
@@ -170,9 +171,10 @@ const DeleteBtn = styled.button`
     background-color: transparent;
 `;
 
-
-
-
+const ListCarContent = styled.main`
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+`;
 
 export {
     DashboardHeader,
@@ -189,5 +191,6 @@ export {
     ErrorMessage,
     ContainerImage,
     Image,
-    DeleteBtn
+    DeleteBtn,
+    ListCarContent
 }
