@@ -6,6 +6,7 @@ const SearchCar = styled.input`
     padding: 0 15px;
     border: 1px solid #878787;
     border-radius: 8px;
+    outline: none;
 `;
 
 const SearchBtn = styled.button`

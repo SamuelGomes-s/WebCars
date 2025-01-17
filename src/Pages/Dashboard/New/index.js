@@ -130,7 +130,7 @@ export default function New() {
                 }
             })
             const response = await addDoc(collection(db, 'cars'), {
-                name: data.name,
+                name: data.name.toUpperCase(),
                 model: data.model,
                 year: data.year,
                 km: data.km,
