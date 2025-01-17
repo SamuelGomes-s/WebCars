@@ -79,7 +79,6 @@ export default function Home() {
             if (querySnapshot.empty) {
                 return loadCars()
             }
-            console.log(querySnapshot)
             let carList = []
             querySnapshot.forEach(doc => {
                 carList.push({

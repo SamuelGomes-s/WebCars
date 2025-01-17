@@ -78,8 +78,7 @@ export default function AuthContextProvider({ children }) {
                     uid: userCredential.user.uid,
                     email: email,
                     name: name
-                }
-                console.log(u)
+                } 
                 setUser(u)
                 setLoginCompleted(true)
             } catch (error) {
