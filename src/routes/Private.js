@@ -10,9 +10,8 @@ export default function Private({ children }) {
         return <div></div>
     }
     if (!signed) {
-        return <Navigate to={'/login'} />
+        return <Navigate to={'/'} />
     }
-
 
     return children
 }

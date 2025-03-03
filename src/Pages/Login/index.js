@@ -19,6 +19,7 @@ import {
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
+
 export default function Login() {
 
     const navigate = useNavigate()
@@ -43,11 +44,10 @@ export default function Login() {
         mode: 'onChange'
     })
 
-
     // sempre que cadastrar ou realizar o login, ira atualizar o estado e o redirecionamento.
     useEffect(() => {
         if (loginCompleted) {
-            navigate('/dashboard',{ replace: true});
+            navigate('/dashboard', { replace: true });
         }
     }, [loginCompleted, navigate]);
 

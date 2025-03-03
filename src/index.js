@@ -13,7 +13,6 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 register()
 
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <AuthContextProvider>

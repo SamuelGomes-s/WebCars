@@ -3,7 +3,6 @@ import logoImg from "../assets/logo.svg"
 import { Link } from "react-router-dom";
 
 //Container para dar espaçamento  nas paginas conforme o header;
-
 const Container = styled.div`
     max-width: 1280px;
     margin: 0 auto;
@@ -25,6 +24,6 @@ const Logo = styled(Link)`
 `;
 
 export {
-    Container, 
+    Container,
     Logo
 }

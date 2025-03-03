@@ -35,10 +35,8 @@ const ActionBtn = styled(Link)`
     &:active{
         opacity: 0.80;
         color: #f00000;
-    }
-    
+    }  
 `;
-
 
 export {
     HeaderContainer,

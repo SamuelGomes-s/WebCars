@@ -13,7 +13,6 @@ import {
 } from "firebase/auth";
 import { toast } from "react-toastify";
 
-
 export const AuthContext = createContext()
 
 export default function AuthContextProvider({ children }) {
@@ -78,7 +77,7 @@ export default function AuthContextProvider({ children }) {
                     uid: userCredential.user.uid,
                     email: email,
                     name: name
-                } 
+                }
                 setUser(u)
                 setLoginCompleted(true)
             } catch (error) {
